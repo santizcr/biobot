@@ -1,218 +1,308 @@
-/* Reset CSS (Basic example) */
-body, h1, h2, h3, p, ul, li {
+body
+{
+  font-size: 0pt;
   margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* General Styles */
-body {
-  font-family: sans-serif; /* Add a default font */
-  font-size: 16px;        /* Set a base font size */
+  padding: 0
 }
 
 .wrapper {
-  background-color: #232323;
-  min-height: 100vh;      /* Full viewport height */
+  background-color: rgb(61, 61, 61);
+  background-size: 100%;
+  height: 1500px;
   width: 360px;
-  margin: 0 auto;         /* Center the wrapper */
 }
-
-/* Blockmain Section */
-.blockmain {
+.blockmain{
   height: 128px;
   width: 360px;
   display: flex;
-  overflow-x: auto;        /* Allow horizontal scrolling if needed */
-  flex-wrap: nowrap;       /* Prevent wrapping */
+  overflow:scroll;
 }
-
-.profile-container { /* Renamed from .container */
-  margin-top: 22px;
-  margin-left: 22px;
-  width: 90px;
-  height: 90px;
-  position: relative; /* For positioning the image */
+.container{
+    margin-top: 22px;
+	margin-left: 22px;
+    width: 90px;
+    height: 90px;
+    position:relative; 
+	
+    
 }
-
-.profile-container img {
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: cover; /* Make the image fill the container nicely */
+.container img {
+    max-width:100%;
+    max-height:100%;
+    top:50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+	overflow:scroll;
+    position: absolute;
 }
-
-.textdiv {
+.textdiv{
   margin-left: 10px;
   margin-top: 21px;
   height: 100px;
   width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; /* Evenly space the text */
 }
-
-.textdiv1 {
+.textdiv1{
+  height: 50px;
   width: 240px;
 }
-
-.textdiv2 {
+.textdiv2{
+  margin-top: 12px;
+  height: 30px;
   width: 240px;
 }
-
-.profile-name { /* Renamed from .text */
+  .textdiv2{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+.text{
   font-weight: bold;
+  margin-top: 7px;
   font-size: 18px;
 }
-
-.profile-description { /* Renamed from .text1 */
+.text1{
   color: rgb(255, 255, 255);
   font-size: 18px;
 }
-
-/* Knopkabox Section */
-.knopkabox {
+.knopkabox{
   height: 80px;
   width: 360px;
   display: flex;
-  justify-content: space-around; /* Evenly space the buttons */
-  align-items: center;      /* Vertically align the buttons */
 }
 
-.share-button-container,   /* Renamed from .knopka */
-.profile-button-container { /* Renamed from .knopka1 */
-  background-color: #232323;
+.knopka{
+  background-color: #3d3d3d;
+  margin-left: 23px;
   height: 55px;
   width: 150px;
-  border-radius: 15px;
-  text-decoration: none; /* Remove underline from links */
-  display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
+  border-radius: 17px;
+  border: 1px solid #595959;
+  display: inline
+  text-decoration:none;
+  
 }
 
-.button-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;    /* Add a little space between icon and text */
+.knopka1{
+  background-color: #3d3d3d;
+  margin-left: 15px;
+  height: 55px;
+  width: 150px;
+  border-radius: 17px;
+  border: 1px solid #595959;
+  display: inline
+  text-decoration:none;
 }
-
-.button-icon img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.button-text {
-  font-size: 15px;
-  color: rgb(173, 20, 215);
-}
-
-/* Main2 Section */
-.main-content { /* Renamed from .main2 */
-  background-color: #232323;
+.main2{
+  background-color: #3d3d3d;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
+  height: 1300px;
   width: 360px;
-  /* height: 1300px; Remove fixed height */
-  margin: 0 auto; /* Center the element */
+  display: inline-block;
+  
 }
-
-/* Common Styles for Images/Videos */
-.media-container {
-  margin: 9px;
+.png{
+  margin-left: 9px;
+  margin-top: 9px;
+  width: 340px;
+  height: 140px;
   border-radius: 25px;
-  overflow: hidden;      /* Hide any overflow */
-  position: relative;  /* So absolute positioned elements are relative to this, if needed */
 }
-
-.media-container img,
-.media-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Crop/scale the content to fit */
+.png img {
+  min-height: 140px;
+  min-width: 340px;
+  width: 340px;
+  height: 140px;
   border-radius: 25px;
-  display: block; /* Remove extra space below the image */
+  overflow:scroll;
+  position: absolute;
 }
-
-.featured-image {      /* Styles for the top banner image */
-    height: 140px;
-}
-
-.channel-section { /*menu1*/
+.menu1{
   width: 355px;
+  height: 169px;
   display: flex;
-  padding: 0 9px;
-  box-sizing: border-box;   /* Include padding in width */
 }
-
-.telegram-channel { /*tg*/
-  background-color: rgb(35, 35, 35);
+.tg{
+  background-color: #3d3d3d;
+  margin-left: 9px;
+  margin-top: 9px;
   width: 160px;
   height: 160px;
   border-radius: 25px;
-  border: 1px solid #ffffff;
-  margin-right: 9px; /* add margin between items */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* horizontally center the content */
+  border: 1px solid #595959;
 }
 
-.channel-icon { /*icon*/
+.donate{
+  margin-left: 9px;
+  margin-top: 9px;
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  
+}
+
+.donate img {
+  min-height: 160px;
+  min-width: 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  overflow:scroll;
+  position: absolute;
+}
+.icon{
+  margin-left: 20px;
+  margin-top: 20px;
   width: 50px;
   height: 50px;
   border-radius: 15px;
-  border: 1px solid rgb(173, 20, 215);
-  margin-top: 10px;
+  border: 1px solid rgb(20, 161, 215);
 }
-
-.channel-icon img {
-  width: 100%;
-  height: 100%;
+.icon img{
+  min-height: 50px;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
   border-radius: 14px;
-  object-fit: cover;
+  overflow:scroll;
+  position: absolute;
 }
 
-.channel-name {  /*text2*/
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  text-align: center;
-  margin-top: auto; /* push text2 to the bottom */
-  margin-bottom: 5px;
+.menu2{
+  width: 355px;
+  height: 145px;
+  display: flex;
 }
 
-.channel-button {  /*button*/
-  background-color: rgba(165, 98, 178, 0.584);
-  border-radius: 10px;
-  border: none;
-  padding: 8px 15px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.donate-section { /*donate*/
+.project{
+  margin-left: 9px;
+  margin-top: 9px;
   width: 160px;
   height: 160px;
   border-radius: 25px;
 }
-
-.service-section { /*prog*/
-  background-color: rgb(35, 35, 35);
-  margin: 33px 9px;
-  width: 330px;
-  height: 50px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  text-align: center;
-  line-height: 50px;
+.project2 video{
+  min-height: 160px;
+  min-width: 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  overflow:scroll;
+  position: absolute;
 }
 
-.service-text {  /*text5*/
+.project2{
+  margin-left: 9px;
+  margin-top: 9px;
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+}
+.project video{
+  min-height: 160px;
+  min-width: 160px;
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  overflow:scroll;
+  position: absolute;
+}
+.button1{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(20, 161, 215);
+  border-radius: 10px;
+  border:none;
+}
+.text2{
+  margin-top: 10px;
+  margin-left: 23px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.button{
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(20, 161, 215);
+  border-radius: 10px;
+  border:none;
+}
+.pd{
+  margin-top: 10px;
+  margin-left: 65px;
+  width: 20px;
+  height: 20px;
+}
+.pd img{
+  min-height: 20px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  overflow:scroll;
+  position: absolute;
+}
+.text3{
+  margin-left: 38px;
   font-size: 15px;
   color: rgb(255, 255, 255);
 }
+.profile{
+  margin-top: 10px;
+  margin-left: 65px;
+  width: 20px;
+  height: 20px;
+}
+.profile img{
+  min-height: 20px;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  overflow:scroll;
+  position: absolute;
+}
+.text4{
+  margin-left: 44px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
+a {
+    text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.prog{
+  
+  width: 340px;
+  height: 200px;
+}
+.prog{
+  background-color: #3d3d3d;
+  margin-top: 33px;
+  margin-left: 9px;
+  width: 330px;
+  height: 50px;
+  border: 1px solid #595959;
+  border-radius: 10px;
+  
+}
+.text5{
+  margin-top: 15px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.prog2{
+  background-color: #3d3d3d;
+  margin-top: 28px;
+  width: 330px;
+  height: 50px;
+  border: 1px solid #595959;
+  border-radius: 10px;
+
+
+
+
+
