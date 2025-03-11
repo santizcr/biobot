@@ -1,4 +1,7 @@
 import telebot
+# Example (Python with python-telegram-bot library)
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
 from config import token
 from telebot import types

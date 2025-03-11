@@ -95,7 +95,7 @@
 		</div>
 		<div class="prog">
 		  <div class= "prog1">
-			<div id="text5" class="text5">спиздил у Flanyx</div>
+			<div id="text5" class="text5">чутка спиздил у димы</div>
 		  </div>
 		  <div class="prog2">
 			<div id="text5" class="text5">леха гей</div>
@@ -107,7 +107,64 @@
 	
 	
 	
-	
+	<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Web App</title>
+  <link rel="stylesheet" href="css/styles.css"> <!-- Your CSS file -->
+</head>
+<body>
+
+  <!-- Your HTML content here (including the button container) -->
+  <div class="main-content">
+      <!-- Your content -->
+      <div id="start-button-container" style="display: none;">
+          <button id="open-app-button" class="button">Open Web App</button>
+      </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const openAppButton = document.getElementById('open-app-button');
+        const startButtonContainer = document.getElementById('start-button-container');
+
+        // 1. Function to show the button
+        function showStartButton() {
+            startButtonContainer.style.display = 'block';
+        }
+
+        // 2. Add event listener for the button click
+        if (openAppButton) {
+            openAppButton.addEventListener('click', function() {
+                 // 3. Open the Telegram Web App (using a special URL format)
+                const webAppUrl = 'https://santizcr.github.io/biobot/index.html'; // Replace with the actual URL
+
+                // This part uses the Telegram.WebApp object (if it's available)
+                if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
+                  Telegram.WebApp.openWebApp(webAppUrl);
+                } else {
+                  // Fallback: Open in a new window/tab if Telegram Web App object is not available (for testing in a browser)
+                  window.open(webAppUrl, '_blank');
+                  alert("This is a fallback behavior, as the Telegram WebApp API is not available");
+                }
+            });
+        }
+
+         // Check if the "tgWebApp" exists (Telegram Web App environment)
+         if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
+            // Show the button if the web app is launched from the bot (or when you want it to show)
+            // In real usage, the decision to show the button depends on your bot's logic.
+            // This is a placeholder to demonstrate the button showing.
+            showStartButton();
+         }
+
+         // Alternative: If you want the button to always show
+         // showStartButton();
+    });
+  </script>
+
+</body>
+</html>
 	
 	
   </body>

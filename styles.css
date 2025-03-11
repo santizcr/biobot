@@ -6,6 +6,23 @@
   font-style: normal;   /* Adjust as needed (normal, italic, etc.) */
 }
 
+.button {  /* Consistent with your other styles */
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(20, 161, 215);
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 16px; /* Adjust font size as needed */
+  cursor: pointer;   /* Change cursor to a pointer on hover */
+}
+
+.button:hover {
+    background-color: #1484b8; /* Darken the button on hover */
+}
+
 body {
   font-size: 0; /* Corrected:  Setting to zero hides text.  Remove this or change */
   margin: 0;
