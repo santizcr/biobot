@@ -1,22 +1,218 @@
-@font-face {
-  font-family: 'Serati Regular';
-  src: url('Serati.woff2') format('woff2'), /* Preferred */
-       url('Serati.woff') format('woff'),
-       url('Serati.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+/* Reset CSS (Basic example) */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
+/* General Styles */
 body {
-  font-family: 'Serati Regular', sans-serif;
+  font-family: sans-serif; /* Add a default font */
+  font-size: 16px;        /* Set a base font size */
 }
 
-.profile-name-text {
-  font-family: 'Serati Regular', sans-serif;
+.wrapper {
+  background-color: #232323;
+  min-height: 100vh;      /* Full viewport height */
+  width: 360px;
+  margin: 0 auto;         /* Center the wrapper */
 }
 
-.profile-description-text {
-  font-family: 'Serati Regular', sans-serif;
+/* Blockmain Section */
+.blockmain {
+  height: 128px;
+  width: 360px;
+  display: flex;
+  overflow-x: auto;        /* Allow horizontal scrolling if needed */
+  flex-wrap: nowrap;       /* Prevent wrapping */
 }
 
-/* Add to other elements as needed */
+.profile-container { /* Renamed from .container */
+  margin-top: 22px;
+  margin-left: 22px;
+  width: 90px;
+  height: 90px;
+  position: relative; /* For positioning the image */
+}
+
+.profile-container img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Make the image fill the container nicely */
+}
+
+.textdiv {
+  margin-left: 10px;
+  margin-top: 21px;
+  height: 100px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Evenly space the text */
+}
+
+.textdiv1 {
+  width: 240px;
+}
+
+.textdiv2 {
+  width: 240px;
+}
+
+.profile-name { /* Renamed from .text */
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.profile-description { /* Renamed from .text1 */
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+/* Knopkabox Section */
+.knopkabox {
+  height: 80px;
+  width: 360px;
+  display: flex;
+  justify-content: space-around; /* Evenly space the buttons */
+  align-items: center;      /* Vertically align the buttons */
+}
+
+.share-button-container,   /* Renamed from .knopka */
+.profile-button-container { /* Renamed from .knopka1 */
+  background-color: #232323;
+  height: 55px;
+  width: 150px;
+  border-radius: 15px;
+  text-decoration: none; /* Remove underline from links */
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;    /* Add a little space between icon and text */
+}
+
+.button-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.button-text {
+  font-size: 15px;
+  color: rgb(173, 20, 215);
+}
+
+/* Main2 Section */
+.main-content { /* Renamed from .main2 */
+  background-color: #232323;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  width: 360px;
+  /* height: 1300px; Remove fixed height */
+  margin: 0 auto; /* Center the element */
+}
+
+/* Common Styles for Images/Videos */
+.media-container {
+  margin: 9px;
+  border-radius: 25px;
+  overflow: hidden;      /* Hide any overflow */
+  position: relative;  /* So absolute positioned elements are relative to this, if needed */
+}
+
+.media-container img,
+.media-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Crop/scale the content to fit */
+  border-radius: 25px;
+  display: block; /* Remove extra space below the image */
+}
+
+.featured-image {      /* Styles for the top banner image */
+    height: 140px;
+}
+
+.channel-section { /*menu1*/
+  width: 355px;
+  display: flex;
+  padding: 0 9px;
+  box-sizing: border-box;   /* Include padding in width */
+}
+
+.telegram-channel { /*tg*/
+  background-color: rgb(35, 35, 35);
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  margin-right: 9px; /* add margin between items */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontally center the content */
+}
+
+.channel-icon { /*icon*/
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid rgb(173, 20, 215);
+  margin-top: 10px;
+}
+
+.channel-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.channel-name {  /*text2*/
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-align: center;
+  margin-top: auto; /* push text2 to the bottom */
+  margin-bottom: 5px;
+}
+
+.channel-button {  /*button*/
+  background-color: rgba(165, 98, 178, 0.584);
+  border-radius: 10px;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.donate-section { /*donate*/
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+}
+
+.service-section { /*prog*/
+  background-color: rgb(35, 35, 35);
+  margin: 33px 9px;
+  width: 330px;
+  height: 50px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.service-text {  /*text5*/
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+}
