@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Serati Regular';
+  src: url('Serati.woff2') format('woff2'), /* Preferred */
+       url('Serati.woff') format('woff'),
+       url('Serati.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Serati Regular', sans-serif;
+}
+
+.profile-name-text {
+  font-family: 'Serati Regular', sans-serif;
+}
+
+.profile-description-text {
+  font-family: 'Serati Regular', sans-serif;
+}
+
+/* Add to other elements as needed */
